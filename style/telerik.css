@@ -1,0 +1,43 @@
+﻿#ValidFiles span, #InvalidFiles span
+{
+    display: block;
+    color:Green;
+}
+.MainWrap
+{
+    width: 780px;
+    margin: 20px auto 0 auto;
+    background: url( 'images/main_back.png' ) repeat-y left top;
+}
+.TopWrap
+{
+    width: 754px;
+    padding: 57px 13px 0 13px;
+    background: url( 'images/head_back.png' ) no-repeat left top;
+}
+.BottomWrap
+{
+    clear: both;
+    height: 18px;
+    background: url( 'images/foot_back.png' ) no-repeat left bottom;
+}
+.Holder
+{
+    width: 340px;
+    border: solid 5px #9b9994;
+    border-bottom: 0;
+    padding: 10px;
+    float: left;
+}
+.Right
+{
+    float: right;
+}
+.ErrorHolder
+{
+    width: 250px;
+    border: solid 5px #955e0d;
+    background: #ff9600 url( 'images/warning.png' ) no-repeat 10px 10px;
+    padding: 20px 10px 30px 70px;
+    display: none;
+}

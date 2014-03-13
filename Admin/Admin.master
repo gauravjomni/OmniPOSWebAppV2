@@ -1,0 +1,157 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin_Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <title>Omnipos</title>
+    <!--                       CSS                       -->
+    <!-- Reset Stylesheet -->
+    <link rel="stylesheet" href="../styles/reset.css" type="text/css" media="screen" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../styles/style.css" type="text/css" media="screen" />
+    <!-- Invalid Stylesheet. This makes stuff look pretty. Remove it if you want the CSS completely valid -->
+    <link rel="stylesheet" href="../styles/invalid.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../styles/theme.css" />
+    <link rel="stylesheet" href="../styles/msgBoxLight.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../styles/print.css" type="text/css" media="print" />
+    <!-- Colour Schemes
+	  
+		<link rel="stylesheet" href="resources/css/blue.css" type="text/css" media="screen" />
+		
+		<link rel="stylesheet" href="resources/css/red.css" type="text/css" media="screen" />  
+	 
+		-->
+    <!-- Internet Explorer Fixes Stylesheet -->
+    <!--[if lte IE 7]>
+			<link rel="stylesheet" href="resources/css/ie.css" type="text/css" media="screen" />
+		<![endif]-->
+    <!--                       Javascripts                       -->
+    <!-- jQuery -->
+    <script type="text/javascript" src="../jquery/jquery-1.js"></script>
+    <%--    <script type="text/javascript" src="jquery/jquery-1.8.3.js"></script>
+        <script type="text/javascript" src="jquery/jquery-ui.js"></script>
+    --%>
+    <!-- jQuery Configuration -->
+    <script type="text/javascript" src="../jquery/simpla.js"></script>
+    <!-- Facebox jQuery Plugin -->
+    <%--<script type="text/javascript" src="jquery/facebox.js"></script>--%>
+    <script type="text/javascript" src="../jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../jquery/jquery-ui-1.10.1.custom.min.js"></script>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css"
+        type="text/css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../jquery/jquery-ui.js"></script>
+    <script type="text/javascript" src="../jquery/jquery.msgBox.js"></script>
+    <!--[if IE]><script type="text/javascript" src="resources/scripts/jquery.bgiframe.js"></script><![endif]-->
+    <!-- Internet Explorer .png-fix -->
+    <!--[if IE 6]>
+			<script type="text/javascript" src="resources/scripts/DD_belatedPNG_0.0.7a.js"></script>
+			<script type="text/javascript">
+				DD_belatedPNG.fix('.png_bg, img, li');
+			</script>
+		<![endif]-->
+    <script type="text/javascript" src="../js/Jscript.js"></script>
+    <script type="text/javascript" src="../js/jscolor.js"></script>
+    <!--	<script type="text/javascript" src="jquery/plugin/combogrid.js"></script>-->
+    <script type="text/javascript" src="../resources/plugin/a.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            var keyStop = {
+                8: ":not(input:text, textarea, input:file, input:password)", // stop backspace = back
+                13: "input:text, input:password", // stop enter = submit 
+
+                end: null
+            };
+            $(document).bind("keydown", function (event) {
+                var selector = keyStop[event.which];
+
+                if (selector !== undefined && $(event.target).is(selector)) {
+                    event.preventDefault(); //stop event
+                }
+                return true;
+            });
+        });
+
+        $("#SubMenu").click(function () {
+            alert('f')
+        });
+
+        function showWarning(pagename) {
+            pagename = pagename.substr(2, (pagename.length) - 2);
+
+            $.msgBox({
+                title: "!W a r n i n g",
+                content: "You are visiting Company Area. Are you sure you want to continue ?",
+                url: pagename
+            });
+        }
+
+        function Confirm() {
+            var inputs = document.getElementsByTagName("input");
+
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].type == "checkbox" && (inputs[i].checked == true)) {
+
+                    var confirm_value = document.createElement("INPUT");
+                    confirm_value.type = "hidden";
+                    confirm_value.name = "confirm_value";
+                    if (confirm("Are you sure you want to clear all order transaction from the location?")) {
+                        confirm_value.value = "Yes";
+                        document.forms[0].appendChild(confirm_value);
+                    } else {
+                        //confirm_value.value = "No";
+                        return false;
+                    }
+                    // document.forms[0].appendChild(confirm_value);                        
+
+                    return true;
+                }
+            }
+
+            alert("No Order is checked so you could not able to delete.");
+            return false;
+        }
+
+        function checkitem(id) {
+            // alert(document.getElementById(id).checked);
+        }
+				
+
+				
+    </script>
+</head>
+<body>
+    <div id="body-wrapper">
+        <form id="form1" name="form1" runat="server" method="post">
+        <div id="sidebar">
+            <div id="sidebar-wrapper">
+                <!-- Sidebar with logo and menu -->
+                <h1 id="sidebar-title">
+                    <a href="#">Omnipos Admin</a></h1>
+                <!-- Logo (221px wide) -->
+                <div style="margin: 0% auto; text-align: center">
+                    <a href="#">
+                        <img id="logo" src="../images/logo.png" alt="Omnipos" align="top" /></a></div>
+                <!-- Sidebar Profile links -->
+                <div id="profile-links">
+                    Hello,
+                    <asp:Label ID="LoggedUserName" runat="server"></asp:Label>
+                    | <a href="signout.aspx" title="Sign Out">Sign Out</a>
+                </div>
+                <ul id="main-nav">
+                    <li><h5><a href="Company.aspx" style="padding-right: 10px;" id="Menu"   >
+                        View Companies</a> </h5></li>
+                        <li><h5><a style="padding-right: 10px;" id="A1" href="AddCompany.aspx" >
+                        Add Company</a></h5> </li>
+                </ul>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+body {
+	background: rgb(245, 245, 245); margin: 0px; padding: 20px; color: rgb(0, 0, 0); line-height: 150%; font-family: Verdana, Tahoma, Arial, sans-serif; font-size: 12px;
+}
+h1 {
+	margin: 0px 0px 20px; font-family: Georgia, "Times New Roman", Times, serif; font-weight: normal;
+}
+h2 {
+	margin: 0px 0px 20px; font-family: Georgia, "Times New Roman", Times, serif; font-weight: normal;
+}
+h3 {
+	margin: 0px 0px 20px; font-family: Georgia, "Times New Roman", Times, serif; font-weight: normal;
+}
+h1 {
+	text-align: center; padding-bottom: 10px; font-size: 30px; margin-bottom: 30px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;
+}
+h2 {
+	background: rgb(68, 68, 68); margin: 40px 0px 20px; padding: 8px; color: rgb(255, 255, 255); font-size: 20px;
+}
+h3 {
+	margin: 30px 0px 10px; font-size: 17px;
+}
+code {
+	color: green;
+}
+pre {
+	margin: 20px 0px; color: green;
+}
+p {
+	margin: 20px 0px;
+}
+a:link {
+	color: blue;
+}
+a:visited {
+	color: blue;
+}
+a:hover {
+	color: red;
+}
+#Wrapper {
+	background: rgb(255, 255, 255); margin: 0px auto; padding: 20px; border: 2px solid rgb(204, 204, 204); width: 960px;
+}
+#intro {
+	line-height: 150%; font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; font-style: italic;
+}
+.example {
+	margin: 0px 0px 20px;
+}
+.Data {
+	background: rgb(255, 255, 255); margin: 0px; border: 1px solid rgb(204, 204, 204); width: 100%; line-height: 140%; border-collapse: collapse;
+}
+.Data td {
+	padding: 5px 10px; text-align: left; border-bottom-color: rgb(204, 204, 204); border-left-color: rgb(204, 204, 204); border-bottom-width: 1px; border-left-width: 1px; border-bottom-style: solid; border-left-style: dotted;
+}
+.Data th {
+	padding: 5px 10px; text-align: left; border-bottom-color: rgb(204, 204, 204); border-left-color: rgb(204, 204, 204); border-bottom-width: 1px; border-left-width: 1px; border-bottom-style: solid; border-left-style: dotted;
+}
+.Data th {
+	color: rgb(0, 0, 0); font-weight: bold; background-color: rgb(231, 231, 231);
+}
+.Data tbody tr:nth-of-type(2n) {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+.vert col:nth-of-type(2n) {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+.rounded.Data {
+	border: 0px currentColor; border-collapse: separate; border-spacing: 0;
+}
+.rounded th {
+	background: rgb(68, 68, 68); border-width: 1px 0px 1px 1px; border-style: solid none solid solid; border-color: rgb(0, 0, 0) currentColor rgb(0, 0, 0) rgb(0, 0, 0); color: rgb(255, 255, 255);
+}
+.rounded th:first-of-type {
+	border-radius: 10px 0px 0px;
+}
+.rounded th:last-of-type {
+	border-radius: 0px 10px 0px 0px; border-right-color: rgb(0, 0, 0); border-right-width: 1px; border-right-style: solid;
+}
+.rounded td:first-of-type {
+	border-left-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid;
+}
+.rounded td:last-of-type {
+	border-right-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid;
+}
+.simple.Data {
+	border: 0px currentColor;
+}
+.simple th {
+	padding-left: 0px;
+}
+.simple td {
+	padding-left: 0px;
+}
+.simple th:first-of-type {
+	padding-left: 10px;
+}
+.simple td:first-of-type {
+	padding-left: 10px;
+}
+.simple th {
+	border-width: 0px 0px 2px; border-style: none none solid; border-color: currentColor currentColor rgb(187, 187, 187);
+}
+.simple td {
+	border-left-color: currentColor; border-left-width: 0px; border-left-style: none;
+}
+.simple tbody tr:nth-of-type(2n) {
+	background-color: rgba(0, 0, 0, 0.02);
+}
+.simple tfoot td {
+	border: 0px currentColor; font-size: 10px;
+}
+.simple tbody tr {
+	counter-increment: row;
+}
+.simple tbody td:first-of-type::before {
+	width: 30px; display: inline-block; content: counter(row) ".";
+}

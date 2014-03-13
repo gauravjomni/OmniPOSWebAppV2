@@ -1,0 +1,33 @@
+﻿.ctPager { color: #555; position: relative; width: auto; margin-left: -1px; font-size: 11px; line-height: 20px; height: 30px;}
+.ctPager .inner { position: absolute; top: 5px; left: 5px; right: 5px; bottom: 5px; z-index:0; }
+.ctPager .imgWrap { border: 1px solid transparent; }
+.ctPager .imgWrap img { float: left; padding: 1px; border-width: 1px 0px 0px 1px; border-style: solid; border-color: transparent; cursor: pointer; }
+.ctPager .imgWrapHover { border: 1px solid #bbb; }
+.ctPager .imgWrapHover img { border-color: #fff !important; border-style: solid; border-width: 1px 0px 0px 1px; }
+.ctPager div { float: left; }
+.ctPager .separator { height: 20px; margin: 0px 6px; border-left: 1px solid #aaa; border-right: 1px solid #fff; }
+
+.ctPager .perPage { }
+.pages select { padding:1px;}
+
+.dvResults th { text-align: left; }
+.dvResults th { white-space: nowrap; color: #666; text-indent: 5px; border-width: 1px 0px 0px 0px; border-style: solid; border-color: #efefef; border-collapse: collapse; } /* cursor: pointer; background: url(http://localhost:51303/WebDermatologist/Theme/images/th-bg.gif) bottom left repeat-x #f9f9f9;*/
+.dvResults th.sorted { }
+
+/*.dvResults th.hover { border-bottom: 1px solid #aaccf6; background: url(/image/th-hover-bg.gif) bottom left repeat-x #ebf3fd; color: #17294c; }*/
+.dvResults th.hover div { }
+.dvResults th div { background: url(http://localhost:51303/WebDermatologist/Theme/webs/images/unsorted.gif) 100% 50% no-repeat; width: auto; padding-right:20px;}
+/*.dvResults th.sort-asc { background: url(/image/th-sort-bg.gif) bottom left repeat-x #fff9dd !important; border-color: #e8e467; color: #000 !important; }*/
+/*.dvResults th.sort-asc div { background-image: url(http://localhost:51303/WebDermatologist/Theme/webs/images/sort-asc.gif); }
+.dvResults th.sort-desc { background: url(http://localhost:51303/WebDermatologist/Theme/webs/images/th-sort-bg.gif) bottom left repeat-x #fff9dd !important; border-color: #e8e467; color: #000 !important; }
+.dvResults th.sort-desc div { background-image: url(http://localhost:51303/WebDermatologist/Theme/webs/images/sort-desc.gif); }*/
+.dvResults th.nosort div { background: transparent; cursor: default; }
+.dvResults th div { position: relative; }
+#div-viewCart .col-0 { display: none;}
+.dvResults .col-0 { display: none;}
+.item-update { padding: 2px;}
+.selUsedQty { width: 40px;text-align: center;vertical-align: middle;}
+#div-formbtns { padding: 10px;text-align: center;}
+#div-formbtns a { padding: 2px;}
+.dis-rows {opacity: .5}
+.dis-rows td {color:#666;}

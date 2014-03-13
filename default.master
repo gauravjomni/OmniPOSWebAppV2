@@ -1,0 +1,37 @@
+﻿<%@ master language="C#" %>
+<%@ Register Src="usercontrols/header_Ctrl_default.ascx" TagName="header_Ctrl_default" TagPrefix="uc_hd_default" %>
+<%@ Register Src="usercontrols/footer_Ctrl.ascx" TagName="footer_Ctrl" TagPrefix="uc_ft" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome to WebWhizTech</title>
+<link href="style/styles.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+<form id="form1" runat="server">
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center" valign="middle"><uc_hd_default:header_Ctrl_default ID="Header_Ctrl1" runat="server" /></td>
+      </tr>
+      <tr>
+        <td align="center" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="center" valign="middle">
+            <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+	        </asp:contentplaceholder>
+            </td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td align="center" valign="middle"><uc_ft:footer_Ctrl ID="Footer_Ctrl1" runat="server" /></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

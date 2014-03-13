@@ -1,0 +1,36 @@
+﻿#parentDisable
+{
+    position:fixed;
+    top:0;
+    left:0;
+    background:#000;
+    opacity:0.8;
+    z-index:998;
+    height:100%;
+    width:100%;
+}
+#loading
+{
+    position:aboslute;
+    z-index:999;
+}
+
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .35 ) 
+                url('http://localhost:51303/WebDermatologist/Theme/webs/Images/progress-bar.gif')
+                50% 50% 
+                no-repeat;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}

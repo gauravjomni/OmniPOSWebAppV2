@@ -1,0 +1,13 @@
+<NewDataSet>
+	<Table>
+        <UserID>3</UserID>
+        <UserName>parijatindia</UserName>
+        <UserPin>1234</UserPin>
+        <UserEmail>admin@omniposweb.com</UserEmail>
+        <Rest_ID>1</Rest_ID>
+        <UserGroupID>1</UserGroupID>
+        <UserGroupName>Super Admin </UserGroupName>
+        <Status>1</Status>
+        <RestName>Royal Court </RestName>
+	</Table>
+</NewDataSet>

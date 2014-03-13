@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<People>
+<Person>
+<ID>1</ID>
+<Name>Francois Mettle</Name>
+<Age>19</Age>
+<Country>France</Country>
+</Person>
+<Person>
+<ID>2</ID>
+<Name>Kevin Bickerstaffe</Name>
+<Age>47</Age>
+<Country>South Africe</Country>
+</Person>
+<Person>
+<ID>3</ID>
+<Name>Laura Kinns</Name>
+<Age>13</Age>
+<Country>USA</Country>
+</Person>
+</People> 
